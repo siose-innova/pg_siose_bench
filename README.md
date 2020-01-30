@@ -1,7 +1,20 @@
 # pg_siose_bench
 A PostgreSQL extension with tools for benchmarking different SIOSE database configurations (pure relational, indexed, json, jsonb, xml, etc)
 
-INSTALLATION
+
+Using Docker
+------------
+There is an available docker image that can be used directly from DockerHub
+	
+    docker pull sioseinnova/pg_siose_bench
+
+Or you can use a docker-compose.yml file to get a complete working environment with PGAdmin4
+
+    docker-compose up
+
+If everything is fine, PGAdmin is working at localhost:5050 (user: pgadmin4@pgadmin.org; pass: admin). Then you can execute the Setup and Experiments explained in the following sections of this README.
+
+Installation
 ------------
 
 Requirements: PostgreSQL 9.5+, postgis extension
@@ -56,3 +69,4 @@ Run a complete jsonb experiment
     SELECT jsonb.which_large_coniferous_patches();
     SELECT jsonb.which_reforested_areas();
     SELECT jsonb.which_scattered_urbanisation();
+
