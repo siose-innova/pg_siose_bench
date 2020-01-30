@@ -2,11 +2,11 @@ version: '2'
 services:
 
   db:
-    # comment on build if want to use the dockerhub build
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: sioseinnova/pg_siose_bench
+    # comment on build if you want to use the dockerhub build
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    image: sioseinnova/pg_siose_bench:0.0.2
     container_name: pg_siose-bench
     ports:
       - "5433:5432" # redirect to 5433 in case you already have postgres installed
