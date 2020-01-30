@@ -12,7 +12,7 @@ Or you can use a docker-compose.yml file to get a complete working environment w
 
     docker-compose up
 
-If everything is fine, PGAdmin is working at localhost:5050 (user: pgadmin4@pgadmin.org; pass: admin). Then you can execute the Setup and Experiments explained in the following sections of this README.
+If everything is fine, PGAdmin is working at localhost:5050 (user: pgadmin4@pgadmin.org; pass: admin). Service is `db` and `postgres` is the default user/password for PostgreSQL. Once logged in, add the extension to the database and you are ready to go. You can execute the Setup and Experiments explained in the following sections of this README.
 
 Installation
 ------------

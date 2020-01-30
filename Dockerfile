@@ -1,11 +1,17 @@
 FROM labgeo/siose_2005
 MAINTAINER Benito Zaragozi <benizar@gmail.com>
 
+#TODO: UPDATE CERTIFICATES
+#Instructions here -> https://www.postgresql.org/about/news/1432/
+
 
 # packages needed for compilation
-RUN apt-get update
-
-RUN apt-get install -y build-essential checkinstall ca-certificates git postgresql-server-dev-9.5
+RUN apt-get update && apt-get install -y --force-yes \
+	build-essential \
+	checkinstall \
+	ca-certificates \ 
+	git \
+	postgresql-server-dev-9.5
 
 
 # download and compile pg_siose_bench
@@ -15,6 +21,14 @@ RUN apt-get install -y build-essential checkinstall ca-certificates git postgres
 #	make install &&\
 #	cd .. &&\
 #	rm -Rf pg_siose_bench
+
+COPY ./doc/ ./doc/
+COPY ./data/ ./data/
+COPY ./sql/ ./sql/
+COPY ./Makefile ./Makefile
+COPY ./pg_siose_bench.control ./pg_siose_bench.control
+COPY ./META.json ./META.json
+
 
 # install from the same repo
 RUN make &&\ 
