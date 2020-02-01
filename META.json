@@ -17,11 +17,11 @@
    },
    "resources": {
       "bugtracker": {
-         "web": "https://github.com/labgeo/pg_siose_bench/issues"
+         "web": "https://github.com/sioseinnova/pg_siose_bench/issues"
       },
       "repository": {
         "url":  "git://github.com/labgeo/pg_siose_bench.git",
-        "web":  "https://github.com/labgeo/pg_siose_bench",
+        "web":  "https://github.com/sioseinnova/pg_siose_bench",
         "type": "git"
       }
    },
